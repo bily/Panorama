@@ -1,24 +1,49 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Stehags kyrka</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="css/panorama.css" />
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Stehags kyrka - Panorama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="js/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
 	<body>
-		
-		<div>
-		<input id="btn1" type="button" value="Exteriör I"></input>
-		<input id="btn7" type="button" value="Exteriör II"></input>
-		<input id="btn2" type="button" value="Vapenhus"></input>
-		<input id="btn3" type="button" value="Altargång"></input>
-		<input id="btn4" type="button" value="Koret"></input>
-		<input id="btn5" type="button" value="Nykyrkan"></input>
-		<input id="btn6" type="button" value="Under orgelläktaren"></input>
+		<div id="container">
+
+			<div>
+				<input id="btn1" type="button" value="Exteriör I"></input>
+				<input id="btn7" type="button" value="Exteriör II"></input>
+				<input id="btn2" type="button" value="Vapenhus"></input>
+				<input id="btn3" type="button" value="Altargång"></input>
+				<input id="btn4" type="button" value="Koret"></input>
+				<input id="btn5" type="button" value="Nykyrkan"></input>
+				<input id="btn6" type="button" value="Under orgelläktaren"></input>
+			</div>
 		</div>
 
-		<div id="container"></div>
+
+		<script src="js/jquery/jquery-1.7.2.min.js"></script>
 		<script src="js/Three.js"></script>
 		<script src="js/panorama.js"></script>
 

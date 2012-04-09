@@ -11,8 +11,24 @@ lon = 0, onMouseDownLon = 0,
 lat = 0, onMouseDownLat = 0,
 phi = 0, theta = 0;
 
-registerButtons();
-initPanorama();
+alert(hasWebGLSupport());
+
+if (hasWebGLSupport()){
+	registerButtons();
+	initPanorama();	
+} else
+{
+	alert('No support');
+}
+
+//Feature test WebGL
+function hasWebGLSupport() {
+	try{
+		return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' );
+	} catch( e ){
+		return false;
+	}
+  };
 
 function registerButtons(){
 
