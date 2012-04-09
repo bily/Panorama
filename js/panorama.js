@@ -1,5 +1,4 @@
 var texture = "stehagskyrka";
-
 var camera, scene, mesh, renderer;
 var btn1, btn2, btn3, btn4, btn5, btn6, btn7;
 
@@ -10,8 +9,6 @@ onMouseDownMouseX = 0, onMouseDownMouseY = 0,
 lon = 0, onMouseDownLon = 0,
 lat = 0, onMouseDownLat = 0,
 phi = 0, theta = 0;
-
-alert(hasWebGLSupport());
 
 if (hasWebGLSupport()){
 	registerButtons();

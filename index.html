@@ -16,6 +16,7 @@
       }
     </style>
     <link href="js/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/panorama.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -29,19 +30,40 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 	<body>
-		<div id="container">
 
-			<div>
-				<input id="btn1" type="button" value="Exteriör I"></input>
-				<input id="btn7" type="button" value="Exteriör II"></input>
-				<input id="btn2" type="button" value="Vapenhus"></input>
-				<input id="btn3" type="button" value="Altargång"></input>
-				<input id="btn4" type="button" value="Koret"></input>
-				<input id="btn5" type="button" value="Nykyrkan"></input>
-				<input id="btn6" type="button" value="Under orgelläktaren"></input>
-			</div>
+		<div id="navbar" class="navbar navbar-fixed-top">
+		  <div class="navbar-inner">
+		   <a class="brand" href="#">Stehags kyrka</a>
+		    <div class="container">
+				<ul class="nav">
+				  <li><a id="btn1" href="#">Exteriör I</a></li>
+				  <li><a id="btn2" href="#">Vapenhus</a></li>
+				  <li><a id="btn3" href="#">Altargång</a></li>
+				  <li><a id="btn4" href="#">Koret</a></li>
+				  <li><a id="btn5" href="#">Nykyrkan</a></li>
+				  <li><a id="btn6" href="#">Under orgelläktaren</a></li>
+				  <li><a id="btn7" href="#">Exteriör II</a></li>
+				</ul>
+				<!--
+				<ul class="nav pull-right">
+		            <li><a href="#">Link</a></li>
+		            <li class="divider-vertical"></li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="#">Action</a></li>
+		                <li><a href="#">Another action</a></li>
+		                <li><a href="#">Something else here</a></li>
+		                <li class="divider"></li>
+		                <li><a href="#">Separated link</a></li>
+	            </ul>
+	           -->
+		    </div>
+		  </div>
 		</div>
 
+		<div id="container">
+		</div>
 
 		<script src="js/jquery/jquery-1.7.2.min.js"></script>
 		<script src="js/Three.js"></script>

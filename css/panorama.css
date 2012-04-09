@@ -4,7 +4,7 @@ body {
 	overflow: hidden;
 }
 
-#info {
+#navbar {
 	position: absolute;
 	top: 0px; width: 100%;
 	color: #ffffff;
