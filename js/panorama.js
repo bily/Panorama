@@ -1,7 +1,7 @@
 var texture = "stehagskyrka";
 
 var camera, scene, mesh, renderer;
-var btn1, btn2, btn3, btn4, btn5, btn6;
+var btn1, btn2, btn3, btn4, btn5, btn6, btn7;
 
 var fov = 70,
 texture_placeholder,
@@ -22,6 +22,7 @@ function registerButtons(){
 	btn4 = document.getElementById( 'btn4' );
 	btn5 = document.getElementById( 'btn5' );
 	btn6 = document.getElementById( 'btn6' );
+	btn7 = document.getElementById( 'btn7' );
 
 	btn1.onclick = onBtnClick;
 	btn2.onclick = onBtnClick;
@@ -29,6 +30,7 @@ function registerButtons(){
 	btn4.onclick = onBtnClick;
 	btn5.onclick = onBtnClick;
 	btn6.onclick = onBtnClick;
+	btn7.onclick = onBtnClick;
 }
 
 function initPanorama()
@@ -93,6 +95,9 @@ function onBtnClick(event){
 			break;
 		case btn6:
 			roomTexture = texture + 7;
+			break;
+		case btn7:
+			roomTexture = texture + 2;
 			break;
 
 	}
