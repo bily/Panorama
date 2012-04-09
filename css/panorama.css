@@ -1,5 +1,4 @@
 body {
-	background-color: #000000;
 	margin: 0px;
 	overflow: hidden;
 }
@@ -8,10 +7,10 @@ body {
 	position: absolute;
 	top: 0px; width: 100%;
 	color: #ffffff;
-	padding: 5px;
-	font-family:Monospace;
+	padding: 10px;
+	font-family: 'Graduate', cursive;
 	font-size:13px;
-	font-weight: bold;
+	font-weight: 400;
 	text-align:center;
 }
 
