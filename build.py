@@ -3,7 +3,7 @@ import shutil
 
 SOURCE_DIR = os.getcwd()
 TARGET_DIR = "C:/wamp/www/panorama"
-IGNORE_PATTERNS = ('*.py','*.rmd','.git','.gitignore',tmp','.svn')
+IGNORE_PATTERNS = ('*.py','*.rmd','.git','.gitignore','tmp','.svn')
 
 # Deleting all files in the target dir
 for the_file in os.listdir(TARGET_DIR):
