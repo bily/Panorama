@@ -8,13 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
     <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
     <link href="js/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/panorama.css" rel="stylesheet">
    <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
@@ -37,8 +31,8 @@
 		   <a class="brand" href="#">Stehags kyrka</a>
 		    <div class="container">
 				<ul class="nav">
-				  <li><a id="btn1" href="#">Exteriör I</a></li>
-				  <li><a id="btn2" href="#">Vapenhus</a></li>
+				  <li><a id="btn1" href="#ext1">Exteriör I</a></li>
+				  <li><a id="btn2" href="#vp">Vapenhus</a></li>
 				  <li><a id="btn3" href="#">Altargång</a></li>
 				  <li><a id="btn4" href="#">Koret</a></li>
 				  <li><a id="btn5" href="#">Nykyrkan</a></li>
@@ -63,12 +57,21 @@
 		  </div>
 		</div>
 
+
 		<div id="container">
+			<div id="map" style="position: absolute; left: 0; top: 60px; z-index: 1;">><p>test</p>
+			</div>
+			<div id="panorama" style="position: absolute; left: 0; top: 0; z-index: 0;">><p>test</p>
+			</div>
 		</div>
 
-		<script src="js/jquery/jquery-1.7.2.min.js"></script>
-		<script src="js/Three.js"></script>
-		<script src="js/panorama.js"></script>
+
+		<script src="js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+		<script src="js/Three.js" type="text/javascript"></script>
+		<script src="js/webGLCheck.js" type="text/javascript"></script>
+		<script src="js/panorama.js" type="text/javascript"></script>
+	    <script src="js/map.js" type="text/javascript"></script>
 
 	</body>
 </html>

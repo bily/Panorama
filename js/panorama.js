@@ -18,16 +18,8 @@ if (hasWebGLSupport()){
 	alert('No support');
 }
 
-//Feature test WebGL
-function hasWebGLSupport() {
-	try{
-		return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' );
-	} catch( e ){
-		return false;
-	}
-  };
-
 function registerButtons(){
+
 
 	btn1 = document.getElementById( 'btn1' );
 	btn2 = document.getElementById( 'btn2' );
@@ -48,7 +40,7 @@ function registerButtons(){
 
 function initPanorama()
 {
-	var container = document.getElementById( 'container' );
+	var container = document.getElementById( 'panorama' );
 
 	scene = new THREE.Scene();
 
@@ -88,6 +80,8 @@ function applyTexture(texture) {
 
 function onBtnClick(event){
 
+	event.preventDefault();
+
 	var roomTexture;
 	switch(event.currentTarget)
 	{
@@ -117,6 +111,16 @@ function onBtnClick(event){
 		applyTexture(roomTexture);
 		animate();
 
+		var btnId = event.currentTarget.getAttribute('id');
+		setActiveButton(btnId);
+
+}
+
+function setActiveButton(buttonId)
+{
+	 $(document).ready( function(){
+       $('#' + buttonId).addClass("active");
+    });
 }
 
 function onDocumentMouseDown( event ) {

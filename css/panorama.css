@@ -1,6 +1,7 @@
 body {
 	margin: 0px;
 	overflow: hidden;
+	padding-top: 0px;
 }
 
 #navbar {
@@ -14,6 +15,8 @@ body {
 	text-align:center;
 }
 
-a {
-	color: #ffffff;
-}
+#map {
+        height: 100%;
+        width: 100%;
+        background-color: #ff0000;
+ }
