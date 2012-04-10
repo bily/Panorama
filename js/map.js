@@ -4,13 +4,16 @@ initMap();
 function removeMap()
 {
 	element = document.getElementById('map');
-	element.parentNode.removeChild(element);
+	if(element != null){
+		element.parentNode.removeChild(element);
+	}
+	
 }
 
 function initMap() {
 	var myLatlng = new google.maps.LatLng(55.896828, 13.415251);
 	var myOptions = {
-		zoom: 12,
+		zoom: 8,
 		center: myLatlng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -37,7 +40,8 @@ function initMap() {
         map: map,
         title: 'Stehags Kyrka'
     });
-
-    infowindow.open(map,marker);
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
 
 }
