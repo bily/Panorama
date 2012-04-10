@@ -25,7 +25,7 @@ function initMap() {
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">Stehags kyrka</h1>'+
         '<div id="bodyContent">'+
-        '<p><b>Stehags Kyrka</b>är en kyrka från mitten av elvahundratalet i Östra Onsjö församling, Lunds stift.</p>'+
+        '<p><b>Stehags Kyrka</b> är en kyrka från mitten av elvahundratalet i Östra Onsjö församling, Lunds stift.</p>'+
         '<p>Mer info: <a href="http://www.svenskakyrkan.se/default.aspx?id=645323">'+
         'http://www.svenskakyrkan.se/default.aspx?id=645323</a></p>'+
         '</div>'+
