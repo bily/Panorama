@@ -36,6 +36,79 @@ function registerButtons(){
 	btn5.onclick = onBtnClick;
 	btn6.onclick = onBtnClick;
 	btn7.onclick = onBtnClick;
+
+	$(document).ready(function() {
+	    $("a[rel=popover1]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+
+	$(document).ready(function() {
+	    $("a[rel=popover2]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+	$(document).ready(function() {
+	    $("a[rel=popover3]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+	$(document).ready(function() {
+	    $("a[rel=popover4]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+	$(document).ready(function() {
+	    $("a[rel=popover5]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+	$(document).ready(function() {
+	    $("a[rel=popover6]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+	$(document).ready(function() {
+	    $("a[rel=popover7]")
+	        .popover({
+	            offset: 10,
+	            placement:'bottom'
+	        })
+	        .click(function(e) {
+	            e.preventDefault()
+	        })
+	});
+
 }
 
 function initPanorama()
@@ -114,6 +187,8 @@ function onBtnClick(event){
 
 		var btnId = event.currentTarget.getAttribute('id');
 		setActiveButton(btnId);
+
+
 
 }
 
