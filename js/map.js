@@ -1,9 +1,10 @@
 var map;
 initMap();
 
-function remoiveMap()
+function removeMap()
 {
-	
+	element = document.getElementById('map');
+	element.parentNode.removeChild(element);
 }
 
 function initMap() {

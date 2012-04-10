@@ -80,6 +80,7 @@ function applyTexture(texture) {
 
 function onBtnClick(event){
 
+	removeMap();
 	event.preventDefault();
 
 	var roomTexture;
