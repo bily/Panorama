@@ -28,7 +28,8 @@ function registerButtons(){
 	btn5 = document.getElementById( 'btn5' );
 	btn6 = document.getElementById( 'btn6' );
 	btn7 = document.getElementById( 'btn7' );
-
+	btn8 = document.getElementById( 'btn7' );
+	
 	btn1.onclick = onBtnClick;
 	btn2.onclick = onBtnClick;
 	btn3.onclick = onBtnClick;
