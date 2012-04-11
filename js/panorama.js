@@ -1,6 +1,7 @@
 var texture = "stehagskyrka";
 var camera, scene, mesh, renderer;
-var btn1, btn2, btn3, btn4, btn5, btn6, btn7;
+var btns = [btn1, btn2, btn3, btn4, btn5, btn6, btn7];
+var btnIds = ['btn1','btn2','btn3','btn4','btn5','btn6','btn7'];
 
 var fov = 70,
 texture_placeholder,
@@ -11,103 +12,32 @@ lat = 0, onMouseDownLat = 0,
 phi = 0, theta = 0;
 
 if (hasWebGLSupport()){
-	registerButtons();
+	registerUI();
 	initPanorama();	
 } else
 {
-	alert('No support');
+	alert('No WebGL support');
 }
 
-function registerButtons(){
+function registerUI(){
 
+	$.each(btnIds, function(i, value) { 
 
-	btn1 = document.getElementById( 'btn1' );
-	btn2 = document.getElementById( 'btn2' );
-	btn3 = document.getElementById( 'btn3' );
-	btn4 = document.getElementById( 'btn4' );
-	btn5 = document.getElementById( 'btn5' );
-	btn6 = document.getElementById( 'btn6' );
-	btn7 = document.getElementById( 'btn7' );
-	btn8 = document.getElementById( 'btn7' );
-	
-	btn1.onclick = onBtnClick;
-	btn2.onclick = onBtnClick;
-	btn3.onclick = onBtnClick;
-	btn4.onclick = onBtnClick;
-	btn5.onclick = onBtnClick;
-	btn6.onclick = onBtnClick;
-	btn7.onclick = onBtnClick;
+		// registering mouse click handlers
+		btns[i] = document.getElementById(value);
+		btns[i].onclick = onBtnClick;
 
-	$(document).ready(function() {
-	    $("a[rel=popover1]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
-	});
-
-	$(document).ready(function() {
-	    $("a[rel=popover2]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
-	});
-	$(document).ready(function() {
-	    $("a[rel=popover3]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
-	});
-	$(document).ready(function() {
-	    $("a[rel=popover4]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
-	});
-	$(document).ready(function() {
-	    $("a[rel=popover5]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
-	});
-	$(document).ready(function() {
-	    $("a[rel=popover6]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
-	});
-	$(document).ready(function() {
-	    $("a[rel=popover7]")
-	        .popover({
-	            offset: 10,
-	            placement:'bottom'
-	        })
-	        .click(function(e) {
-	            e.preventDefault()
-	        })
+		// registering popup info
+		$(document).ready(function() {
+		    $("a[rel=popover"+(i+1)+"]")
+		        .popover({
+		            offset: 10,
+		            placement:'bottom'
+		    })
+		        .click(function(e) {
+		            e.preventDefault()
+		        })
+		});
 	});
 
 }
@@ -156,48 +86,30 @@ function onBtnClick(event){
 
 	removeMap();
 	event.preventDefault();
-
 	var roomTexture;
-	switch(event.currentTarget)
-	{
-		case btn1:
-			roomTexture = texture + 1;
-			break;
-		case btn2:
-			roomTexture = texture + 3;
-			break;
-		case btn3:
-			roomTexture = texture + 4;
-			break;
-		case btn4:
-			roomTexture = texture + 8;
-			break;
-		case btn5:
-			roomTexture = texture + 6;
-			break;
-		case btn6:
-			roomTexture = texture + 7;
-			break;
-		case btn7:
-			roomTexture = texture + 2;
-			break;
 
-	}
-		applyTexture(roomTexture);
-		animate();
+	$.each(btns, function(i, value) { 
+		if (event.currentTarget == value){
+			roomTexture = texture + (i+1);
+		}
+	});
 
-		var btnId = event.currentTarget.getAttribute('id');
-		setActiveButton(btnId);
+	applyTexture(roomTexture);
+	animate();
 
-
+	var btnId = event.currentTarget.getAttribute('id');
+	setActiveButton(btnId);
 
 }
 
 function setActiveButton(buttonId)
 {
-	 $(document).ready( function(){
-       $('#' + buttonId).addClass("active");
-    });
+	$.each(btnIds, function(i, value) { 
+		$('#' + value).parent().get(0).className = "nothing";
+	});
+
+	var parent = $('#' + buttonId).parent().get(0);
+    parent.className = "active";
 }
 
 function onDocumentMouseDown( event ) {
