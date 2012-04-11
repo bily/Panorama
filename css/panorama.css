@@ -21,3 +21,11 @@ body {
         width: 100%;
  }
  #map img{max-width: inherit;} 
+
+#pfooter{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+  }
