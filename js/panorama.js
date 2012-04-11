@@ -1,5 +1,6 @@
 var texture = "stehagskyrka";
 var camera, scene, mesh, renderer;
+var btn1,btn2, btn3, btn4, btn5, btn6, btn7;
 var btns = [btn1, btn2, btn3, btn4, btn5, btn6, btn7];
 var btnIds = ['btn1','btn2','btn3','btn4','btn5','btn6','btn7'];
 
