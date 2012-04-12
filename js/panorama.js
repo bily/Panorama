@@ -66,7 +66,7 @@ function applyTexture(textureName) {
 
 	var texturePath = 'textures/' + textureName + '.jpg';
 	var sphere = new THREE.SphereGeometry( 500, 60, 40 );
-	var material =  new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( texturePath ) } )
+	var material =  new THREE.MeshBasicMaterial( { map: ThreeUtils.loadTexture( texturePath, null, null, onTextureProgress ) } )
 
 	mesh = new THREE.Mesh( sphere, material);
 	mesh.scale.x = -1;
@@ -88,6 +88,11 @@ function removeOldPanoramaObjects(){
 	{
 		container.removeChild(renderer.domElement);
 	}
+}
+
+
+function onTextureProgress(value){
+
 }
 
 function onBtnClick(event){
