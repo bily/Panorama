@@ -58,10 +58,27 @@ function initPanorama()
 	document.addEventListener( 'mouseup', onDocumentMouseUp, false );
 	document.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
 	document.addEventListener( 'DOMMouseScroll', onDocumentMouseWheel, false);	
-
 }
 
-function applyTexture(texture) {
+function applyTexture(textureName) {
+
+	removeOldPanoramaObjects();
+
+	var texturePath = 'textures/' + textureName + '.jpg';
+	var sphere = new THREE.SphereGeometry( 500, 60, 40 );
+	var material =  new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( texturePath ) } )
+
+	mesh = new THREE.Mesh( sphere, material);
+	mesh.scale.x = -1;
+	scene.add( mesh );
+
+	renderer = new THREE.WebGLRenderer();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+
+	container.appendChild( renderer.domElement );
+}
+
+function removeOldPanoramaObjects(){
 
 	if (mesh != null){
 		scene.remove(mesh);
@@ -71,16 +88,6 @@ function applyTexture(texture) {
 	{
 		container.removeChild(renderer.domElement);
 	}
-
-	mesh = new THREE.Mesh( new THREE.SphereGeometry( 500, 60, 40 ), new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( 'textures/' + texture + '.jpg' ) } ) );
-	mesh.scale.x = -1;
-	scene.add( mesh );
-
-	renderer = new THREE.WebGLRenderer();
-	renderer.setSize( window.innerWidth, window.innerHeight );
-
-	container.appendChild( renderer.domElement );
-
 }
 
 function onBtnClick(event){
@@ -100,7 +107,6 @@ function onBtnClick(event){
 
 	var btnId = event.currentTarget.getAttribute('id');
 	setActiveButton(btnId);
-
 }
 
 function setActiveButton(buttonId)
